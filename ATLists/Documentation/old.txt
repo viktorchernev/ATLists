@@ -1,0 +1,66 @@
+﻿-------------------------PICTURES-----------------------------------------
+ImageItem
+	.string										Name
+	.Distionary<ImageResolution, Image>			Images	
+
+	.GetSmall()
+	.GetMedium()
+	.GetLarge()
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+IMultyStepIncrementable
+IMultyQualifiable
+IMultyQuantifiable
+IAutomateable
+IDataStorage
+
+
+I am coloring categoryviews in "ListPage.xaml.cs" ctor
+
+
+
+
+Implement "Grid" based layout in LoginPage, instead of the current layout
+Fix typo in Android resource - "small_extentionpole.png" to "small_extensionpole.png"
+Update category short ammount after updating an entry
+Add menu item for short decrement/increment/none/locked
+
+Add checkbox for double-click decrementable
+Add field for order in which an item appear
+Add gutter cleaning list
+Multitext entries - entries that appear on couple of places on a list
+
+
+InventoryEntryPlain
+	Does nothing, just a text, has no quantity at all
+
+InventoryEntryNumeric		
+	Can be increased or decreased - that is, it has a quantity
+
+InventoryEntryPacpcs		
+	Same as Numeric, but a given number translates to a bigger entity - 
+	120 is displayed as 1pack 20pieces, e.g.
+
+InventoryEntryFractal
+	Has a fractal piece and can be decremented by a fraction
+	Not a very nice idea
+
+InventoryEntryPercental
+	Has a decimal piece and can be decremented by a percent
+
+InventoryEntryDecay
+	Has a quality and can be decreased by %
+
+InventoryEntryAutoDecay
+	Has a quality and can be decreased by %, also, it automatically 
+	decreases w time
+
+InventoryEntryAutoRipe
+	Has a ready and not-ready states
+	Becomes ready with time.
+
+InventoryEntryQualities
+	Has different attributes that can be set by % or stars/points
+
+InventoryEntryRecycleable
+	For rags for example, has multiple stages

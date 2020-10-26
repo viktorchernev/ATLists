@@ -1,0 +1,52 @@
+﻿ATLists.Interfaces			ATLists.SQL
+---------------------------------------------------
+ISingleTextStorage		==	SqlSingleText
+IMultyTextStorage		==	SqlMultyText
+ISingleFileContainer 	== 	TODO
+IMultyFileContainer		== 	TODO
+
+ITaggable				== 	TODO
+IStateable				==	TODO
+
+IColorable				==	SqlColorable
+IIconable				==	SqlIconable
+
+IEntryStorage			==	SqlEntryStorage
+ICategoryStorage		==	SqlCategoryStorage
+
+IQualifiable			==	SqlQualifiable
+IQuantifiable			==	SqlQualifiable
+IStepIncrementable		==	TODO
+
+ITimeable				== 	TODO
+
+
+
+
+ATLists						ATLists.SQL
+---------------------------------------------------
+EntryBase				==	SqlEntry
+CategoryBase			==	SqlCategory
+ListBase				==	SqlList
+
+
+
+ATLists.Basics
+---------------------------------------------------
+ItemQuality
+ItemQuantity
+ItemColorTheme
+ItemStepIncrement
+
+
+
+ATLists
+---------------------------------------------------
+													EntryBase
+EntryBase + ISingleTextStorage 					=>  EntryBasic
+
+IEntryStorage									=>	CategoryBase
+CategoryBase + ISingleTextStorage + IIconable	=>	CategoryBasic
+
+ICategoryStorage								=>	ListBase
+ListBase + ISingleTextStorage + IIconable		=>	ListBasic

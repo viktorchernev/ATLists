@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Documentation\ICategoryStorage.cs" />
+    <Compile Remove="Documentation\IEntryStorage.cs" />
+    <Compile Remove="Documentation\IIconable.cs" />
+    <Compile Remove="Documentation\ISingleTextStorage.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Documentation\ICategoryStorage.cs" />
+    <None Include="Documentation\IEntryStorage.cs" />
+    <None Include="Documentation\IIconable.cs" />
+    <None Include="Documentation\ISingleTextStorage.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
+  </ItemGroup>
+
+</Project>

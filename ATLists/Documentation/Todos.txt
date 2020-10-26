@@ -1,0 +1,12 @@
+﻿TODO:
+Deal with the ItemColorTheme basic and with the icolorable interface.
+IEntryStorage inheritance problem
+sql category item has category type, how will inheritence work?
+Process the "old.txt"
+
+
+
+DONE:
+Add reference to "SQLite-net" to remove errors and build
+Copied all implementation documentation
+
