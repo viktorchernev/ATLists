@@ -1,6 +1,12 @@
 ﻿/* IMultyTextStorage
  * "IMultyTextStorage" is an interface for storing multiple texts. */
 
+//USINGS:
+using ATLists;
+using ATLists.Interfaces;
+using ATLists.SQL;
+using Newtonsoft.Json;
+
 
 
 /// IMPLEMENTATION:

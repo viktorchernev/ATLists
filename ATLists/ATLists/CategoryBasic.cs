@@ -210,20 +210,6 @@ namespace ATLists
             SqlSingleTextObject = new SqlSingleText() { Text = text };
             Procedures.Insert(SqlSingleTextObject);
 
-
-            //IColorable - Data
-            //ForeColors = new Dictionary<string, Color>();
-            //BackColors = new Dictionary<string, Color>();
-            //ForeColor = viewItem.ForeColor;
-            //BackColor = viewItem.BackColor;
-            ////IColorable - SQL
-            //SqlColorableObject = new SqlColorable();
-            //SqlColorableObject.ForeColor = ForeColor.ToArgb();
-            //SqlColorableObject.BackColor = BackColor.ToArgb();
-            //SqlColorableObject.ForeColorsJson = "";
-            //SqlColorableObject.BackColorsJson = "";
-            //Procedures.Insert(SqlColorableObject);
-
             //IIconable
             ImageSource = iconName;
             SqlIconableObject = new SqlIconable();
@@ -246,6 +232,7 @@ namespace ATLists
         }
         public CategoryBasic(SqlCategory cat)
         {
+            SqlItem = cat;
             SqlSingleText st = Procedures.SingleTexts[cat.SqlSingleText];
             //SqlColorable c = Procedures.Colorables[cat.SqlColorable];
             SqlIconable i = Procedures.Iconables[cat.SqlIconable];
@@ -255,19 +242,18 @@ namespace ATLists
             SqlSingleTextObject = st;
             Text = st.Text;
 
-            //IColorable
-            //SqlColorableObject = c;
-            //ForeColor = Color.FromArgb(c.ForeColor);
-            //BackColor = Color.FromArgb(c.BackColor);
-            //ForeColors = JsonConvert.DeserializeObject<Dictionary<string, Color>>(c.ForeColorsJson);
-            //BackColors = JsonConvert.DeserializeObject<Dictionary<string, Color>>(c.BackColorsJson);
-
             //IIconed
             SqlIconableObject = i;
             ImageSource = i.ImageSource;
 
             //IEntryStorage
             SqlEntryStorageObject = es;
+
+            if(es == null)
+            {
+                bool bbb = false;
+            }
+
             Entries = new List<EntryBase>();
             foreach (byte b in es.Entries)
             {

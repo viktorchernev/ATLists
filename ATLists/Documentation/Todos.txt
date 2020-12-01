@@ -1,8 +1,21 @@
 ﻿TODO:
+Fix interface tracking to a plugable style so inheritence can work
 Deal with the ItemColorTheme basic and with the icolorable interface.
 Process the "old.txt"
 Add vector graphics database storage icons
 Fix this text file
+Fix the Explanation.txt
+Fix Sql.Procedures.InsertDummyLists() that does nothing atm.
+Review try/catching and unit test everything
+Implement ITagable and IMultyTagable
+Do sql objects init so no field is null
+
+Consider what ammount of functionality should be in the base classes
+Add usings to interface documentation
+In the implementation examples, add ctors with data parameters for the given interface
+
+BUG: Entries in Category are null after loading from the DB
+BUG: ListBasic instances does not have SqlItem after loading from the DB
 
 
 DONE:

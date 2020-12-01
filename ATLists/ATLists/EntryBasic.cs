@@ -147,20 +147,6 @@ namespace ATLists
             SqlSingleTextObject = new SqlSingleText() { Text = text };
             Procedures.Insert(SqlSingleTextObject);
 
-
-            //IColorable - Data
-            //ForeColors = new Dictionary<string, Color>();
-            //BackColors = new Dictionary<string, Color>();
-            //ForeColor = viewItem.ForeColor;
-            //BackColor = viewItem.BackColor;
-            ////IColorable - SQL
-            //SqlColorableObject = new SqlColorable();
-            //SqlColorableObject.ForeColor = ForeColor.ToArgb();
-            //SqlColorableObject.BackColor = BackColor.ToArgb();
-            //SqlColorableObject.ForeColorsJson = "";
-            //SqlColorableObject.BackColorsJson = "";
-            //Procedures.Insert(SqlColorableObject);
-
             //Set SQLEntry
             SqlItem = new SqlEntry();
             //SqlItem.SqlColorable = (byte)SqlColorableObject.Id;
@@ -170,19 +156,13 @@ namespace ATLists
         }
         public EntryBasic(SqlEntry e)
         {
+            SqlItem = e;
             SqlSingleText st = Procedures.SingleTexts[e.SqlSingleText + 1];
             //SqlColorable c = Procedures.Colorables[e.SqlColorable];
 
             //SqlSingleText
             SqlSingleTextObject = st;
             Text = st.Text;
-
-            //IColorable
-            //SqlColorableObject = c;
-            //ForeColor = Color.FromArgb(c.ForeColor);
-            //BackColor = Color.FromArgb(c.BackColor);
-            //ForeColors = JsonConvert.DeserializeObject<Dictionary<string, Color>>(c.ForeColorsJson);
-            //BackColors = JsonConvert.DeserializeObject<Dictionary<string, Color>>(c.BackColorsJson);
         }
     }
 }

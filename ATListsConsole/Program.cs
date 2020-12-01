@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 
 using ATLists;
 using ATLists.SQL;
+using SQLite;
 
 namespace ATListsConsole
 {
@@ -18,20 +19,20 @@ namespace ATListsConsole
         {
             //Get JSON payload
             string json = getPayloadFromEmbedded();
-            object payload = JsonConvert.DeserializeObject<Payload>(json);
+            Payload payload = JsonConvert.DeserializeObject<Payload>(json);
 
             //Set DB path
-            string fileName = @"roadrun_db.db3";
+            string fileName = @"TestDB.db";
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string completePath = System.IO.Path.Combine(folderPath, fileName);
             Procedures.DATABASE_PATH = completePath;
 
-            //Dummy DB items
-            Procedures.DropTables();
+            //DB items
+            List<ListBase> lists;
             if (!Procedures.CheckTablesExist())
             {
                 Procedures.CreateTables();
-                Procedures.InsertDummyLists();
+                lists = GetEntriesFromPayload(payload);
             }
 
             //Load all from DB
@@ -46,6 +47,7 @@ namespace ATListsConsole
             }
 
             //Done, look at the results in debugger
+            string jsonInspect = JsonConvert.SerializeObject(INVENTORY_LISTS);
             Console.WriteLine(INVENTORY_LISTS.Count());
         }
 
@@ -64,6 +66,45 @@ namespace ATListsConsole
             }
 
             return payload;
+        }
+        static List<ListBase> GetEntriesFromPayload(Payload pld)
+        {
+            ListBasic lic = new ListBasic("Commands");
+            foreach(KeyValuePair<string, List<Cmd>> kvp in pld.CommandEntries)
+            {
+                string cat = kvp.Key;
+                CategoryBasic cb = new CategoryBasic(cat);
+                foreach (Cmd cmd in kvp.Value)
+                {
+                    EntryMultyText e = new EntryMultyText(
+                        "command_text", cmd.command_text,
+                        "what_does", cmd.what_does,
+                        "explanation", cmd.explanation,
+                        "example", cmd.example,
+                        "example_explanation", cmd.example_explanation,
+                        "tags", cmd.tags.ToString());
+                    cb.AddEntry(e);
+                }
+                lic.AddCategory(cb);
+            }
+
+            ListBasic lia = new ListBasic("Auxiliary");
+            foreach (KeyValuePair<string, List<Aux>> kvp in pld.InfoEntries)
+            {
+                string cat = kvp.Key;
+                CategoryBasic cb = new CategoryBasic(cat);
+                foreach (Aux aux in kvp.Value)
+                {
+                    EntryMultyText e = new EntryMultyText(
+                        "command_text", aux.command_text,
+                        "description", aux.description,
+                        "tags", aux.tags.ToString());
+                    cb.AddEntry(e);
+                }
+                lia.AddCategory(cb);
+            }
+
+            return new List<ListBase>() { lic, lia };
         }
     }
 }

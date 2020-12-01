@@ -42,99 +42,6 @@ namespace ATLists
 
 
 
-        //IColorable
-        //public SqlColorable SqlColorableObject
-        //{
-        //    get;
-        //    private set;
-        //}
-        //public Color ForeColor
-        //{
-        //    get;
-        //    private set;
-        //}
-        //public Color BackColor
-        //{
-        //    get;
-        //    private set;
-        //}
-        //public Dictionary<string, Color> ForeColors
-        //{
-        //    get;
-        //    private set;
-        //}
-        //public Dictionary<string, Color> BackColors
-        //{
-        //    get;
-        //    private set;
-        //}
-        //public void SetForeColor(Color color)
-        //{
-        //    ForeColor = color;
-
-        //    //Save to DB
-        //    SqlColorableObject.ForeColor = color.ToArgb();
-        //    Procedures.Update(SqlColorableObject);
-
-        //    //update View
-        //}
-        //public void SetBackColor(Color color)
-        //{
-        //    BackColor = color;
-
-        //    //Save to DB
-        //    SqlColorableObject.BackColor = color.ToArgb();
-        //    Procedures.Update(SqlColorableObject);
-
-        //    //update View
-        //}
-        //public void SetColorTheme(string key)
-        //{
-        //    ForeColor = ForeColors[key];
-        //    BackColor = ForeColors[key];
-
-        //    //Save to DB
-        //    SqlColorableObject.ForeColor = ForeColor.ToArgb();
-        //    SqlColorableObject.BackColor = BackColor.ToArgb();
-        //    Procedures.Update(SqlColorableObject);
-
-        //    //update View
-        //}
-        //public void AddForeColor(string key, Color color)
-        //{
-        //    ForeColors.Add(key, color);
-
-        //    //Save to DB
-        //    SqlColorableObject.ForeColorsJson = JsonConvert.SerializeObject(ForeColors);
-        //    Procedures.Update(SqlColorableObject);
-        //}
-        //public void AddBackColor(string key, Color color)
-        //{
-        //    BackColors.Add(key, color);
-
-        //    //Save to DB
-        //    SqlColorableObject.BackColorsJson = JsonConvert.SerializeObject(BackColors);
-        //    Procedures.Update(SqlColorableObject);
-        //}
-        //public void RemoveForeColor(string key)
-        //{
-        //    ForeColors.Remove(key);
-
-        //    //Save to DB
-        //    SqlColorableObject.ForeColorsJson = JsonConvert.SerializeObject(ForeColors);
-        //    Procedures.Update(SqlColorableObject);
-        //}
-        //public void RemoveBackColor(string key)
-        //{
-        //    BackColors.Remove(key);
-
-        //    //Save to DB
-        //    SqlColorableObject.BackColorsJson = JsonConvert.SerializeObject(BackColors);
-        //    Procedures.Update(SqlColorableObject);
-        //}
-
-
-
         //IIconable
         public SqlIconable SqlIconableObject
         {
@@ -179,8 +86,6 @@ namespace ATLists
             foreach (CategoryBase c in Categories) ids.Add((byte)c.SqlItem.Id);
             SqlCategoryStorageObject.Categories = ids.ToArray();
             Procedures.Update(SqlCategoryStorageObject);
-
-            //update View
         }
         public void RemoveCategory(CategoryBase category)
         {
@@ -212,20 +117,6 @@ namespace ATLists
             SqlSingleTextObject = new SqlSingleText() { Text = text };
             Procedures.Insert(SqlSingleTextObject);
 
-
-            //IColorable - Data
-            //ForeColors = new Dictionary<string, Color>();
-            //BackColors = new Dictionary<string, Color>();
-            //ForeColor = viewItem.ForeColor;
-            //BackColor = viewItem.BackColor;
-            ////IColorable - SQL
-            //SqlColorableObject = new SqlColorable();
-            //SqlColorableObject.ForeColor = ForeColor.ToArgb();
-            //SqlColorableObject.BackColor = BackColor.ToArgb();
-            //SqlColorableObject.ForeColorsJson = "";
-            //SqlColorableObject.BackColorsJson = "";
-            //Procedures.Insert(SqlColorableObject);
-
             //IIconable
             ImageSource = iconName;
             SqlIconableObject = new SqlIconable();
@@ -240,7 +131,6 @@ namespace ATLists
             //Set SQL
             SqlItem = new SqlList();
             SqlItem.SqlSingleText = (byte)SqlSingleTextObject.Id;
-            //SqlItem.SqlColorable = (byte)SqlColorableObject.Id;
             SqlItem.SqlIconable = (byte)SqlIconableObject.Id;
             SqlItem.SqlCategoryStorage = (byte)SqlCategoryStorageObject.Id;
             SqlItem.ListType = ListType;
@@ -248,21 +138,14 @@ namespace ATLists
         }
         public ListBasic(SqlList list)
         {
+            SqlItem = list;
             SqlSingleText st = Procedures.SingleTexts[list.SqlSingleText];
-            //SqlColorable c = Procedures.Colorables[list.SqlColorable];
             SqlIconable i = Procedures.Iconables[list.SqlIconable];
             SqlCategoryStorage cs = Procedures.CategoryStorages[list.SqlCategoryStorage];
 
             //SqlSingleText
             SqlSingleTextObject = st;
             Text = st.Text;
-
-            //IColorable
-            //SqlColorableObject = c;
-            //ForeColor = Color.FromArgb(c.ForeColor);
-            //BackColor = Color.FromArgb(c.BackColor);
-            //ForeColors = JsonConvert.DeserializeObject<Dictionary<string, Color>>(c.ForeColorsJson);
-            //BackColors = JsonConvert.DeserializeObject<Dictionary<string, Color>>(c.BackColorsJson);
 
             //IIconed
             SqlIconableObject = i;

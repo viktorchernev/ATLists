@@ -20,6 +20,20 @@ namespace ATLists.SQL
         public static Dictionary<int, SqlEntry> Entries { get; private set; }
         public static Dictionary<int, SqlCategory> Categories { get; private set; }
         public static Dictionary<int, SqlList> Lisis { get; private set; }
+        static Procedures()
+        {
+            SingleTexts = new Dictionary<int, SqlSingleText>();
+            MultyTexts = new Dictionary<int, SqlMultyText>();
+            Colorables = new Dictionary<int, SqlColorable>();
+            Qualifiables = new Dictionary<int, SqlQualifiable>();
+            Quantifiables = new Dictionary<int, SqlQuantifiable>();
+            Iconables = new Dictionary<int, SqlIconable>();
+            EntryStorages = new Dictionary<int, SqlEntryStorage>();
+            CategoryStorages = new Dictionary<int, SqlCategoryStorage>();
+            Entries = new Dictionary<int, SqlEntry>();
+            Categories = new Dictionary<int, SqlCategory>();
+            Lisis = new Dictionary<int, SqlList>();
+        }
 
 
 

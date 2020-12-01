@@ -14,6 +14,7 @@ namespace ATLists
         {
             REGISTER = new Dictionary<string, Func<SqlEntry, EntryBase>>();
             REGISTER.Add("Basic", GetEntryBasic);
+            REGISTER.Add("MultyText", GetEntryMultyText);
         }
 
 
@@ -34,6 +35,10 @@ namespace ATLists
         public static EntryBasic GetEntryBasic(SqlEntry sqle)
         {
             return new EntryBasic(sqle);
+        }
+        public static EntryMultyText GetEntryMultyText(SqlEntry sqle)
+        {
+            return new EntryMultyText(sqle);
         }
     }
 }
