@@ -27,12 +27,18 @@ public void SetText(string text)
 
 
 /// CTOR:
-public CTOR(SQLOBJECT)
+public CTOR(int sqlObjectId)
 {
-    SqlSingleText st = Procedures.SingleTexts[SQLOBJECT.SqlSingleText];
+    SqlSingleText st = Procedures.SingleTexts[sqlObjectId];
 
     //SqlSingleText
     SqlSingleTextObject = st;
+    Text = st.Text;
+}
+public CTOR(SQLOBJECT)
+{
+    //SqlSingleText
+    SqlSingleTextObject = SQLOBJECT;
     Text = st.Text;
 }
 public CTOR(string text)

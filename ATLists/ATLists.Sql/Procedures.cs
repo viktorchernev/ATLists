@@ -606,5 +606,27 @@ namespace ATLists.SQL
                 return false;
             }
         }
+
+
+        /// <summary>
+        /// Inserts some example info in the database
+        /// </summary>
+        /// <returns></returns>
+        public static bool InsertDummyLists()
+        {
+            try
+            {
+                using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(DATABASE_PATH))
+                {
+
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                string exc = ex.Message;
+                return false;
+            }
+        }
     }
 }

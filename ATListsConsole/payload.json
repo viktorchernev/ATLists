@@ -1,0 +1,1730 @@
+{
+  "CommandEntries": {
+    "git": [
+      {
+        "command_text": "git --version",
+        "what_does": "Print the current version of git",
+        "explanation": "",
+        "example": "git --version",
+        "example_explanation": "",
+        "tags": [ "" ]
+      }
+    ],
+    "git-add": [
+      {
+        "command_text": "git add <filename>",
+        "what_does": "Stage a file",
+        "explanation": "",
+        "example": "git add readme.md",
+        "example_explanation": "Stage \"readme.md\" for commit",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git add <filename> -f",
+        "what_does": "Stage a file",
+        "explanation": "-f Allowes adding otherwise ignored files",
+        "example": "git add readme.md -f",
+        "example_explanation": "Stage \"readme.md\" for commit",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git add <filename> --force",
+        "what_does": "Stage a file",
+        "explanation": "--force Allowes adding otherwise ignored files",
+        "example": "git add readme.md --force",
+        "example_explanation": "Stage \"readme.md\" for commit",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git add *",
+        "what_does": "Track all",
+        "explanation": "",
+        "example": "git add *",
+        "example_explanation": "Add all files as tracked, excluding ignored files",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git add * -v",
+        "what_does": "Track all",
+        "explanation": "-v Is for verbose output",
+        "example": "git add * -v",
+        "example_explanation": "Add all files as tracked, excluding ignored files",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git add * -v",
+        "what_does": "Track all",
+        "explanation": "-v Is for verbose output",
+        "example": "git add * -v",
+        "example_explanation": "Add all files as tracked, excluding ignored files",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git add * --verbose",
+        "what_does": "Track all",
+        "explanation": "--verbose Is for verbose output",
+        "example": "git add * --verbose",
+        "example_explanation": "Add all files as tracked, excluding ignored files",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git add .",
+        "what_does": "Stage all to commit",
+        "explanation": "",
+        "example": "git add .",
+        "example_explanation": "Stage all modified files for commit",
+        "tags": [ "" ]
+      }
+    ],
+    "git-am": [
+      {
+        "command_text": "git am <path>",
+        "what_does": "Apply a patch from a file",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git am --resolved",
+        "what_does": "Proceed to next conflict",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git am -3 <path>",
+        "what_does": "Attempt a 3 way merge",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      }
+    ],
+    "git-apply": [
+      {
+        "command_text": "git apply <path>",
+        "what_does": "Apply a patch",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git apply --check <path>",
+        "what_does": "Check if a patch applies cleanly",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      }
+    ],
+    "git-branch": [
+      {
+        "command_text": "git branch",
+        "what_does": "List all branches",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git branch <branchname>",
+        "what_does": "Create a new branch",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git branch -d <branchname>",
+        "what_does": "Delete a branch",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git branch -D <branchname>",
+        "what_does": "Delete a branch (force)",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git branch -v",
+        "what_does": "View last commit on each branch",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git branch -vv",
+        "what_does": "List all branches w additional info",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git branch --merged",
+        "what_does": "View branches merged in the cur branch",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git branch --no-merged",
+        "what_does": "View branches not merged in the cur branch",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git branch --move <bad-branch-name> <corrected-branch-name>",
+        "what_does": "Rename a branch",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git branch --all",
+        "what_does": "List all branches including remote ones",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git branch -u <remote>/<branch>",
+        "what_does": "Set tracking remote branch",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git branch --set-upstream-to <remote>/<branch>",
+        "what_does": "Set tracking remote branch (Synonym)",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git branch <new-branchname> <remote-branchname>",
+        "what_does": "Create a new branch",
+        "explanation": "",
+        "example": "git branch sc/ruby_client master",
+        "example_explanation": "",
+        "tags": [ "" ]
+      }
+    ],
+    "git-checkout": [
+      {
+        "command_text": "git checkout <branchname>",
+        "what_does": "Switch to a branch",
+        "explanation": "Switch to a branch",
+        "example": "git checkout featurebranch",
+        "example_explanation": "Switch to a branch named featurebranch",
+        "tags": [ "Git_Branching-Switching_Branches" ]
+      },
+      {
+        "command_text": "git checkout <tagname>",
+        "what_does": "Switch to a tagged version (Detached HEAD!)",
+        "explanation": "Switch to a tagged version (Detached HEAD!)",
+        "example": "git checkout v1.4",
+        "example_explanation": "Switch to a tag named v1.4",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git checkout -b <newbranchname>",
+        "what_does": "Create a branch and switch to it",
+        "explanation": "Create a branch and switch to it",
+        "example": "git checkout -b newbranch",
+        "example_explanation": "Create a branch named newbranch and switch to it",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git checkout -b <newbranchname> <tagname>",
+        "what_does": "Create a branch from a tag point and switch to it",
+        "explanation": "Create a branch from a tag point and switch to it",
+        "example": "git checkout -b newbranch v1.4",
+        "example_explanation": "Create a branch named newbranch from where \"v1.4\" point to and switch to it",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git checkout -b <branch> <remote>/<branch>",
+        "what_does": "Create a branch and set it to track a remote branch and switch to it",
+        "explanation": "",
+        "example": "git checkout -b newbranch origin/master",
+        "example_explanation": "Create a branch named newbranch and set it to track \"origin/master\" and switch to it",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git checkout --track <remote>/<branch>",
+        "what_does": "Create a local branch from a remote branch and set it to track that remote branch and switch to it",
+        "explanation": "",
+        "example": "git checkout --track origin/master",
+        "example_explanation": "Create a branch named master and set it to track \"origin/master\" and switch to it",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git checkout <remote-branch>",
+        "what_does": "Create a local branch from a remote branch and set it to track that remote branch and switch to it",
+        "explanation": "",
+        "example": "git checkout origin/master",
+        "example_explanation": "Create a branch named master and set it to track \"origin/master\" and switch to it",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git checkout -- <file>",
+        "what_does": "Revert a file to the last commit version",
+        "explanation": "Reverts a file to the last commit version",
+        "example": "git checkout -- readme.md ",
+        "example_explanation": "Revert \"readme.md\" to the last commit",
+        "tags": [ "" ]
+      }
+    ],
+    "git-clone": [
+      {
+        "command_text": "git clone <url>",
+        "what_does": "Clones a repository into a newly created directory",
+        "explanation": "",
+        "example": "git clone https://server/namespace/project.git",
+        "example_explanation": "Clones a repository into a newly created directory, creates remote-tracking branches for each branch in the cloned repository",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git clone <url> <new-local-repo-name>",
+        "what_does": "Clones a repository into a newly created directory",
+        "explanation": "",
+        "example": "git clone https://server/namespace/project.git myproj",
+        "example_explanation": "Clones a repository into a newly created directory, creates remote-tracking branches for each branch in the cloned repository",
+        "tags": [ "" ]
+      }
+    ],
+    "git-commit": [
+      {
+        "command_text": "git commit -m \"<commit-message>\"",
+        "what_does": "Commit all staged files",
+        "explanation": "-m adds commit message",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git commit -a -m \"<commit-message>\"",
+        "what_does": "Commit all without staging",
+        "explanation": "-a to skip the staging",
+        "example": "git commit -a -m \"Initial commit\"",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git commit -a --message=<commit-message>",
+        "what_does": "Commit all without staging",
+        "explanation": "-a to skip the staging",
+        "example": "git commit -a --message=<commit-message>",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git commit --amend",
+        "what_does": "Add to the last commit (Rebase!)",
+        "explanation": "",
+        "example": "git commit -amend",
+        "example_explanation": "",
+        "tags": [ "" ]
+      }
+    ],
+    "git-config": [
+      {
+        "command_text": "git help -c",
+        "what_does": "List all config file settables",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config --list",
+        "what_does": "List all set settings",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config --list --show-origin",
+        "what_does": "List all settings and where they come from",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config --show-origin <key> <value>",
+        "what_does": "View where a setting comes from",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config --system --list",
+        "what_does": "List all set settings from the system config",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config --global --list",
+        "what_does": "List all set settings from the user config",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config --local --list",
+        "what_does": "List all set settings from the repo config",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config -f <file-path>",
+        "what_does": "Read config from file",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config --file <file-path>",
+        "what_does": "Read config from file",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config --blob <blob-id>",
+        "what_does": "Similar to --file but use the given blob instead of a file",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config --[<the-level>] <key> <value>",
+        "what_does": "Write a configuration",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config --[<the-level>] <key>",
+        "what_does": "Read a configuration",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config --[<the-level>] --unset <key>",
+        "what_does": "Remove a key",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config --[<the-level>] --remove-section <section-name>",
+        "what_does": "Remove a section",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config tag.gpgSign",
+        "what_does": "A boolean to specify whether all tags should be GPG signed",
+        "explanation": "",
+        "example": "git config tag.gpgSign true",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config user.name <username>",
+        "what_does": "Set username",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config user.email <email>",
+        "what_does": "Set username",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config core.editor <editor-string>",
+        "what_does": "Set default text editor",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config --global init.defaultBranch <branch-name>",
+        "what_does": "Set default branch name",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config pull.rebase <bool>",
+        "what_does": "Set default pull behaviour",
+        "explanation": "",
+        "example": "git config --global pull.rebase \"false\"",
+        "example_explanation": "false - fast-forward if possible, owise a merge commit. true - Rebase on pulling (Rebase!)",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config alias.<alias> <command>",
+        "what_does": "Set a command alias",
+        "explanation": "",
+        "example": "git config --global alias.co checkout",
+        "example_explanation": "Set \"co\" as an alias for \"checkout\"",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config alias.<alias> <command-sequence>",
+        "what_does": "Set a command alias",
+        "explanation": "",
+        "example": "git config --global alias.unstage 'reset HEAD --'",
+        "example_explanation": "Set \"unstage\" as an alias for \"reset HEAD --\"",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git config alias.<alias> <command-sequence>",
+        "what_does": "Set a command alias",
+        "explanation": "",
+        "example": "git config --global alias.last 'log -1 HEAD'",
+        "example_explanation": "Set \"last\" as an alias for \"log -1 HEAD\"",
+        "tags": [ "" ]
+      }
+    ],
+    "git-diff": [
+      {
+        "command_text": "git diff --staged",
+        "what_does": "Show diff for the staged files vs last commit",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git diff --cached",
+        "what_does": "Show diff for the staged files vs last commit - synonym of --staged",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git diff --staged --check",
+        "what_does": "Show diff for the staged files vs last commit.",
+        "explanation": "--check to identify multiple whitespaces and more",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git diff --staged --name-only",
+        "what_does": "Show diff for the staged files vs last commit.",
+        "explanation": "--name-only to show only the names of the files",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git diff [<options>] <commit> <commit>",
+        "what_does": "This is to view the changes between two arbitrary <commit>",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git diff [<options>] <commit>..<commit>",
+        "what_does": "This is to view the changes between two arbitrary <commit>",
+        "explanation": "Can use \"<commit> <commit>\" instead",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git diff [<options>] <branch-name>",
+        "what_does": "This is to view the changes between a branch and the current branch",
+        "explanation": "",
+        "example": "git diff master",
+        "example_explanation": "Show diff of all changes in the current branch that is not merged to \"master\" yet",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git diff [<options>] <branch-name>...<branch-name>",
+        "what_does": "This is to view the changes between two branches",
+        "explanation": "",
+        "example": "git diff master...branch",
+        "example_explanation": "Show diff of all changes in a \"branch\" that is not merged to \"master\" yet",
+        "tags": [ "" ]
+      }
+    ],
+    "git-fetch": [
+      {
+        "command_text": "git fetch <local name>",
+        "what_does": "Fetch remote data (Fetch does not merge anything, unlike pull)",
+        "explanation": "",
+        "example": "git fetch master",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git fetch --all",
+        "what_does": "Fetch all remotes data (Fetch does not merge anything, unlike pull)",
+        "explanation": "",
+        "example": "git fetch --all",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git fetch -t <local name>",
+        "what_does": "Fetch all tags",
+        "explanation": "",
+        "example": "git fetch -t master",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git fetch --tags <local name>",
+        "what_does": "Fetch all tags",
+        "explanation": "",
+        "example": "git fetch --tags master",
+        "example_explanation": "",
+        "tags": [ "" ]
+      }
+    ],
+    "git-help": [
+      {
+        "command_text": "git help <verb>",
+        "what_does": "Get a usage message",
+        "explanation": "",
+        "example": "git help tag",
+        "example_explanation": "Get a usage message about the tag command",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git <verb> -h",
+        "what_does": "Get a usage message",
+        "explanation": "",
+        "example": "git tag -h",
+        "example_explanation": "Get a usage message about the tag command",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git <verb> --help",
+        "what_does": "Get a usage message",
+        "explanation": "",
+        "example": "git tag --help",
+        "example_explanation": "Get a usage message about the tag command",
+        "tags": [ "" ]
+      }
+    ],
+    "git-init": [
+      {
+        "command_text": "git init",
+        "what_does": "Create a github repo from the current folder",
+        "explanation": "",
+        "example": "git init",
+        "example_explanation": "Start version-controling the curent dir by initializing a github repository",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git init --bare",
+        "what_does": "Create a bare github repo from the current folder",
+        "explanation": "",
+        "example": "git init --bare",
+        "example_explanation": "",
+        "tags": [ "" ]
+      }
+    ],
+    "git-log": [
+      {
+        "command_text": "git log",
+        "what_does": "View commit history",
+        "explanation": "",
+        "example": "git log",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log -p",
+        "what_does": "View commit history, showing diff between each commit",
+        "explanation": "The output can be very large!",
+        "example": "git log -p",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --patch",
+        "what_does": "View commit history, showing diff between each commit",
+        "explanation": "The output can be very large!",
+        "example": "git log --patch",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log -<n>",
+        "what_does": "View commit history, limiting the number of commits shown",
+        "explanation": "-<n> sets the number of commits to be shown",
+        "example": "git log -2",
+        "example_explanation": "Show last 2 commits",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --stat",
+        "what_does": "View commit history, showing diff stat (+/- s) between each commit",
+        "explanation": "--stat show the number of additions and deletions in files in terms of diff, but no more",
+        "example": "git log --stat",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --shortstat",
+        "what_does": "View commit history",
+        "explanation": "--shortstat outputs only the last line of the --stat format containing total number of modified files, as well as number of added and deleted lines.",
+        "example": "git log --shortstat",
+        "example_explanation": "Output only the last line of the --stat format containing total number of modified files, as well as number of added and deleted lines.",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --name-only",
+        "what_does": "View commit history",
+        "explanation": "--name-only shows only names of changed files.",
+        "example": "git log --name-only",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --pretty=<string-or-pattern>",
+        "what_does": "View commit history, formatting the output",
+        "explanation": "--pretty changes output format in different ways ways, according to the format string that goes with it",
+        "example": "git log --pretty=oneline",
+        "example_explanation": "Option values include oneline, short,full, fuller, and format (where you specify your own format).",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --pretty=<string-or-pattern>",
+        "what_does": "View commit history, formatting the output",
+        "explanation": "--pretty changes output format in different ways ways, according to the format string that goes with it",
+        "example": "git log --pretty=format:\"%h - %an, %ar : %s\"",
+        "example_explanation": "Specifying a custom format. Option values include oneline, short,full, fuller, and format (where you specify your own format).",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --pretty=oneline",
+        "what_does": "View commit history, formatting the output",
+        "explanation": "--pretty=oneline changes output format to fit on one line per commit",
+        "example": "git log --pretty=oneline",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --pretty=fuller",
+        "what_does": "View commit history, formatting the output",
+        "explanation": "--pretty=fuller changes output format to show more details",
+        "example": "git log --pretty=fuller",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --oneline",
+        "what_does": "View commit history, formatting the output",
+        "explanation": "--oneline is a shorthand for --pretty=oneline --abbrev-commit used together.",
+        "example": "git log --oneline",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --graph",
+        "what_does": "View commit history, showing a branch graph ASCII",
+        "explanation": "--graph adds the ASCII graph",
+        "example": "git log --graph",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --abbrev-commit",
+        "what_does": "View commit history",
+        "explanation": "Show only the first few characters of the SHA-1 checksum instead of all 40",
+        "example": "git log --abbrev-commit",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --name-status",
+        "what_does": "View commit history",
+        "explanation": "Show the list of files affected with added/modified/deleted information as well",
+        "example": "git log --name-status",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --relative-date",
+        "what_does": "View commit history",
+        "explanation": "Display the date in a relative format (for example, \"2 weeks ago\") instead of using the full date format",
+        "example": "git log --relative-date",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --skip=<number>",
+        "what_does": "View commit history",
+        "explanation": "Skip number commits before starting to show the commit output",
+        "example": "git log --skip=100",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --since=<date>",
+        "what_does": "View commit history",
+        "explanation": "Time limit",
+        "example": "git log --since=2.weeks",
+        "example_explanation": "Display commits from the last 2 weeks",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --after=<date>",
+        "what_does": "View commit history",
+        "explanation": "Time limit",
+        "example": "git log --after=2.weeks",
+        "example_explanation": "Display commits from the last 2 weeks",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --until=<date>",
+        "what_does": "View commit history",
+        "explanation": "Time limit",
+        "example": "git log --until=2.weeks",
+        "example_explanation": "Show commits older than a specific date",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --before=<date>",
+        "what_does": "View commit history",
+        "explanation": "Time limit",
+        "example": "git log --before=2.weeks",
+        "example_explanation": "Show commits older than a specific date",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --author=<pattern>",
+        "what_does": "View commit history",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "Show commits by author",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --committer=<pattern>",
+        "what_does": "View commit history",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "Show commits by committer",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --grep=<pattern>",
+        "what_does": "View commit history",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "Filter commits by grep pattern",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log -S <string>",
+        "what_does": "View commit history",
+        "explanation": "-S to find commits that changed the number of occurances of <string>",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --<filepath>",
+        "what_does": "View commit history",
+        "explanation": "Find commits changing the file in <filepath>",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --decorate",
+        "what_does": "View commit history",
+        "explanation": "Show branches info w commits info",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --merges",
+        "what_does": "View commit history",
+        "explanation": "Remove not merge commits - that is, commits with more than 1 parent",
+        "example": "git log --merges",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --no-merges",
+        "what_does": "View commit history",
+        "explanation": "Remove merge commits - that is, commits with more than 1 parent",
+        "example": "git log --no-merges",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --min-parents=2",
+        "what_does": "View commit history",
+        "explanation": "Remove not merge commits - that is, commits with more than 1 parent",
+        "example": "git log --min-parents=2",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --min-parents=1",
+        "what_does": "View commit history",
+        "explanation": "Remove merge commits - that is, commits with more than 1 parent",
+        "example": "git log --min-parents=1",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log <something> --not <something-else>",
+        "what_does": "View commit history",
+        "explanation": "Shows all commits that are in any of local branches but not in any of remote-tracking branches for origin (what you have that origin doesn’t)",
+        "example": "git log --branches --not --remotes=origin",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log <branch>..<other-branch>",
+        "what_does": "View commit history",
+        "explanation": "Double dot notation",
+        "example": "git log issue54..origin/master",
+        "example_explanation": "Show commits related to some of those 2 branches, but not both",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --grep=<pattern> --grep=<pattern> --all-match",
+        "what_does": "View commit history",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "Filter commits by all grep pattern",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --all",
+        "what_does": "View commit history",
+        "explanation": "Pretend as if all the refs in refs/, along with HEAD, are listed on the command line as <commit>",
+        "example": "git log --all",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --branches[=<pattern>]",
+        "what_does": "View commit history",
+        "explanation": "Pretend as if all the refs in refs/heads are listed on the command line as <commit>",
+        "example": "git log --branches",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --tags[=<pattern>]",
+        "what_does": "View commit history",
+        "explanation": "Pretend as if all the refs in refs/tags are listed on the command line as <commit>",
+        "example": "git log --tags",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git log --remotes[=<pattern>]",
+        "what_does": "View commit history",
+        "explanation": "Pretend as if all the refs in refs/remotes are listed on the command line as <commit>",
+        "example": "git log --remotes",
+        "example_explanation": "",
+        "tags": [ "" ]
+      }
+    ],
+    "git-merge": [
+      {
+        "command_text": "git merge <branchname>",
+        "what_does": "Merge a branch into the current branch",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git merge <remote>/<branchname>",
+        "what_does": "Merge a remote branch into the current branch",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git merge @{u}",
+        "what_does": "Merge the tracked branch into current",
+        "explanation": "\"@{u} is for \\\"upstream\"\\\",",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git merge @{upstream}",
+        "what_does": "Merge the tracked branch into current  (Synonym)",
+        "explanation": "\"@{upstream} is for \\\"upstream\"\\\",",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      }
+    ],
+    "git-mergetool": [
+      {
+        "command_text": "git mergetool --tool-help",
+        "what_does": "Get a usage message for the configured mergetool",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      }
+    ],
+    "git-mv": [
+      {
+        "command_text": "git mv <file_from> <file_to>",
+        "what_does": "Rename a file",
+        "explanation": "",
+        "example": "git rm readme.md README.TXT",
+        "example_explanation": "Rename \"readme.md\" to \"README.TXT\"",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git mv -f <file_from> <file_to>",
+        "what_does": "Rename a file",
+        "explanation": "-f To force renaming or moving of a file even if the target exists",
+        "example": "git rm -f readme.md README.TXT",
+        "example_explanation": "Rename \"readme.md\" to \"README.TXT\"",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git mv --force <file_from> <file_to>",
+        "what_does": "Rename a file",
+        "explanation": "--force To force renaming or moving of a file even if the target exists",
+        "example": "git rm --force readme.md README.TXT",
+        "example_explanation": "Rename \"readme.md\" to \"README.TXT\"",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git mv -k <file_from> <file_to>",
+        "what_does": "Rename a file",
+        "explanation": "-k To skip move or rename actions which would lead to an error condition",
+        "example": "git rm -k readme.md README.TXT",
+        "example_explanation": "Rename \"readme.md\" to \"README.TXT\"",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git mv -n <file_from> <file_to>",
+        "what_does": "Rename a file",
+        "explanation": "-n To do a dry run",
+        "example": "git rm -n readme.md README.TXT",
+        "example_explanation": "Pretend to rename \"readme.md\" to \"README.TXT\"",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git mv --dry-run <file_from> <file_to>",
+        "what_does": "Rename a file",
+        "explanation": "--dry-run To do a dry run",
+        "example": "git rm --dry-run readme.md README.TXT",
+        "example_explanation": "Pretend to rename \"readme.md\" to \"README.TXT\"",
+        "tags": [ "" ]
+      }
+    ],
+    "git-pull": [
+      {
+        "command_text": "git pull",
+        "what_does": "Fetch and merge",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git pull --autostash",
+        "what_does": "Fetch and merge",
+        "explanation": "Automatically create a temporary stash entry before the operation begins, and apply it after the operation ends. This means that you can run the operation on a dirty worktree. However, use with care: the final stash application after a successful merge might result in non-trivial conflicts",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git pull -r",
+        "what_does": "Rebase the current branch on top of the upstream branch after fetching",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git pull --rebase[=false|true|merges|preserve|interactive]",
+        "what_does": "When true, rebase the current branch on top of the upstream branch after fetching",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      }
+    ],
+    "git-push": [
+      {
+        "command_text": "git push <remote local name> <branch>",
+        "what_does": "Push upstream",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git push origin <branch>:<branch>",
+        "what_does": "Push branch to remote branch",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git push origin <tagname>",
+        "what_does": "Push a tag (not pushed otherwise)",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git push origin --tags",
+        "what_does": "Push all the tags (annotated & lweight)",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git push <remote> :refs/tags/<tagname>:",
+        "what_does": "Delete remote tag by setting it to NULL",
+        "explanation": "",
+        "example": "git push origin :refs/tags/v1.4-lw",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git push <local-repo-name> --delete <tagname>",
+        "what_does": "Delete remote tag (also)",
+        "explanation": "",
+        "example": "git push origin --delete v1.4",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git push --set-upstream <origin> <branch-name>",
+        "what_does": "Set upstream and push",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git push origin --delete <branch-name>",
+        "what_does": "Delete a remote branch",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git push --force",
+        "what_does": "Rewrite history on the server",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      }
+    ],
+    "git-rebase": [
+      {
+        "command_text": "git rebase <branch>",
+        "what_does": "Rebase the current branch to <branch>",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git rebase --onto <branch-a> <branch-b> <branch-c>",
+        "what_does": "Rebase the diff commits from <branch-c> and <branch-b> onto <branch-a>",
+        "explanation": "",
+        "example": "git rebase --onto master server client",
+        "example_explanation": "Rebase the diff commits from client and server onto master",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git rebase <branch-a> <branch-b>",
+        "what_does": "Rebase <branch-b> onto <branch-a>",
+        "explanation": "",
+        "example": "git rebase master server",
+        "example_explanation": "Rebase server onto master",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git rebase <remote>/<branch>",
+        "what_does": "",
+        "explanation": "",
+        "example": "git rebase origin/master",
+        "example_explanation": "",
+        "tags": [ "" ]
+      }
+    ],
+    "git-remote": [
+      {
+        "command_text": "git remote -v",
+        "what_does": "View configured remotes w urls",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git remote add <remote local name> <remote URL>",
+        "what_does": "Add a remote",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git remote show <remote local name>",
+        "what_does": "Show more info on a remote",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git remote rename <old name> <new name>",
+        "what_does": "Change local remote name",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git remote remove <remote local name>",
+        "what_does": "Remove a remote",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git remote rm <remote local name>",
+        "what_does": "Remove a remote (Synonym)",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git remote add <remote-local-name> <url>",
+        "what_does": "Add a remote",
+        "explanation": "",
+        "example": "git remote add local_proj /srv/git/project.git",
+        "example_explanation": "Add remote from mounted filesystem",
+        "tags": [ "" ]
+      }
+    ],
+    "git-reset": [
+      {
+        "command_text": "git reset HEAD <file>",
+        "what_does": "Unstage a file",
+        "explanation": "",
+        "example": "git reset HEAD readme.md",
+        "example_explanation": "Unstage \"readme.md\"",
+        "tags": [ "" ]
+      }
+    ],
+    "git-restore": [
+      {
+        "command_text": "git restore --staged <filename>",
+        "what_does": "Unstage a file. Alternative to git reset",
+        "explanation": "",
+        "example": "git restore --staged readme.md",
+        "example_explanation": "Unstage \"readme.md\"",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git restore <filename>",
+        "what_does": "Unmodify a modified file",
+        "explanation": "",
+        "example": "git restore readme.md",
+        "example_explanation": "Restore \"readme.md\" to last commit",
+        "tags": [ "" ]
+      }
+    ],
+    "git-rm": [
+      {
+        "command_text": "git rm <filename>",
+        "what_does": "Remove a file",
+        "explanation": "",
+        "example": "git rm readme.md",
+        "example_explanation": "Remove readme.md",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git rm -f <filename>",
+        "what_does": "Remove a file",
+        "explanation": "-f Force removal if staged",
+        "example": "git rm -f readme.md",
+        "example_explanation": "Remove readme.md",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git rm --cached <filename>",
+        "what_does": "Untrack a file",
+        "explanation": "--cached To untrack staged file but without deleting it",
+        "example": "git rm --cached readme.md",
+        "example_explanation": "Untrack readme.md",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git rm <glob-pattern>",
+        "what_does": "Remove a file using a glob pattern",
+        "explanation": "",
+        "example": "git rm log/\\*.log",
+        "example_explanation": "Remove all files that end with \".log\" in the \"log\" folder",
+        "tags": [ "" ]
+      }
+    ],
+    "git-show": [
+      {
+        "command_text": "git show",
+        "what_does": "Show info about HEAD",
+        "explanation": "",
+        "example": "git show",
+        "example_explanation": "Show info about HEAD",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git show <object>",
+        "what_does": "Show info about an object",
+        "explanation": "",
+        "example": "git show 9ca2313",
+        "example_explanation": "Show info about commit starting with \"9ca2313\"",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git show <tag name>-lw",
+        "what_does": "Show info about a lightweight tag",
+        "explanation": "",
+        "example": "git show v1.4-lw",
+        "example_explanation": "Show info about a lightweight tag named \"v1.4\"",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git show <object> --pretty=oneline --abbrev-commit",
+        "what_does": "Show info about an object in one line",
+        "explanation": "--abbrev-commit is to shorten the commit hash to first characters",
+        "example": "git show 9ca2313 --pretty=oneline --abbrev-commit",
+        "example_explanation": "Show info about commit starting with \"9ca2313\"",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git show <object> --format=oneline --abbrev-commit",
+        "what_does": "Show info about an object in one line",
+        "explanation": "--abbrev-commit is to shorten the commit hash to first characters",
+        "example": "git show 9ca2313 --format=oneline --abbrev-commit",
+        "example_explanation": "Show info about commit starting with \"9ca2313\"",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git show <object> --oneline",
+        "what_does": "Show info about an object in one line",
+        "explanation": "--oneline is a shorthand for \"--pretty=oneline --abbrev-commit\"",
+        "example": "git show 9ca2313 --oneline",
+        "example_explanation": "Show info about commit starting with \"9ca2313\"",
+        "tags": [ "" ]
+      }
+    ],
+    "git-status": [
+      {
+        "command_text": "git status",
+        "what_does": "Get the working directory status",
+        "explanation": "",
+        "example": "git status",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git status -s",
+        "what_does": "Get the working directory status",
+        "explanation": "",
+        "example": "git status -s",
+        "example_explanation": "Give the output in the short-format",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git status --short",
+        "what_does": "Get the working directory status",
+        "explanation": "",
+        "example": "git status --short",
+        "example_explanation": "Give the output in the short-format",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git status -v",
+        "what_does": "Get the workdir status, w verbose output",
+        "explanation": "",
+        "example": "git status -v",
+        "example_explanation": "Get the workdir status, w verbose output",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git status --verbose",
+        "what_does": "Get the workdir status, w verbose output",
+        "explanation": "",
+        "example": "git status --verbose",
+        "example_explanation": "Get the workdir status, w verbose output",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git status -b",
+        "what_does": "Show the branch and tracking info",
+        "explanation": "",
+        "example": "git status -b",
+        "example_explanation": "Show the branch and tracking info",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git status --branch",
+        "what_does": "Show the branch and tracking info",
+        "explanation": "",
+        "example": "git status --branch",
+        "example_explanation": "Show the branch and tracking info",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git status --show-stash",
+        "what_does": "Get the working directory status",
+        "explanation": "",
+        "example": "git status --show-stash",
+        "example_explanation": "Show the number of entries currently stashed away",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git status -u[<mode>]",
+        "what_does": "Get the working directory status",
+        "explanation": "",
+        "example": "git status -u all",
+        "example_explanation": "Show untracked files",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git status --untracked-files[=<mode>]",
+        "what_does": "Get the working directory status",
+        "explanation": "",
+        "example": "git status --untracked-files=all",
+        "example_explanation": "Show untracked files. no - Show no untracked files, normal - Shows untracked files and directories, all - Also shows individual files in untracked directories",
+        "tags": [ "" ]
+      }
+    ],
+    "git-switch": [
+      {
+        "command_text": "git switch -c <new-branch-name>",
+        "what_does": "Create a new branch and switch to it",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git switch --create <new-branch-name>",
+        "what_does": "Create a new branch and switch to it",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git switch <branch-name>",
+        "what_does": "Switch to an existing branch",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git switch -",
+        "what_does": "Undo switch",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git switch -d",
+        "what_does": "Switch to a commit for inspection and discardable experiments",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git switch --detach",
+        "what_does": "Switch to a commit for inspection and discardable experiments",
+        "explanation": "",
+        "example": "",
+        "example_explanation": "",
+        "tags": [ "" ]
+      }
+    ],
+    "git-tag": [
+      {
+        "command_text": "git tag",
+        "what_does": "List all tags",
+        "explanation": "",
+        "example": "git tag",
+        "example_explanation": "List all tags",
+        "tags": [ "ProGit-Tagging-Listing_Your_Tags" ]
+      },
+      {
+        "command_text": "git tag -l",
+        "what_does": "List all tags",
+        "explanation": "-l is for list. Synonym of \"git tag\"",
+        "example": "git tag -l",
+        "example_explanation": "List all tags in the repository",
+        "tags": [ "ProGit-Tagging" ]
+      },
+      {
+        "command_text": "git tag --list",
+        "what_does": "List all tags",
+        "explanation": "--list is for list. Synonym of \"git tag\"",
+        "example": "git tag --list",
+        "example_explanation": "List all tags in the repository",
+        "tags": [ "ProGit-Tagging" ]
+      },
+      {
+        "command_text": "git tag -l <pattern>",
+        "what_does": "List all tags matching a <pattern>",
+        "explanation": "",
+        "example": "git tag -l \"v1.8.5*\"",
+        "example_explanation": "List all tags that start with \"v1.8.5\" and end with something else, or with nothing more",
+        "tags": [ "ProGit-Tagging" ]
+      },
+      {
+        "command_text": "git tag --list <pattern>",
+        "what_does": "List all tags matching a <pattern>",
+        "explanation": "",
+        "example": "git tag --list \"v1.8.5*\"",
+        "example_explanation": "List all tags that start with \"v1.8.5\" and end with something else, or with nothing more",
+        "tags": [ "ProGit-Tagging" ]
+      },
+      {
+        "command_text": "git tag -a <tag-name> -m \"<tag-comment>\"",
+        "what_does": "Create an annotated tag",
+        "explanation": "-a to create an annotated tag. -m to comment on the tag creation",
+        "example": "git tag -a v1.4 -m \"my version 1.4\"",
+        "example_explanation": "Create an annotated tag named \"v1.4\" with the comment \"my version 1.4\"",
+        "tags": [ "ProGit-Tagging-Annotated_Tags" ]
+      },
+      {
+        "command_text": "git tag --annotate <tag-name> -m \"<tag-comment>\"",
+        "what_does": "Create an annotated tag",
+        "explanation": "--annotate to create an annotated tag. -m to comment on the tag creation",
+        "example": "git tag --annotate v1.4 -m \"my version 1.4\"",
+        "example_explanation": "Create an annotated tag named \"v1.4\" with the comment \"my version 1.4\"",
+        "tags": [ "ProGit-Tagging-Annotated_Tags" ]
+      },
+      {
+        "command_text": "git tag -a <tag-name> <commit-hash> -m \"<tag-comment>\"",
+        "what_does": "Create an annotated tag, pointing to a previous commit",
+        "explanation": "-a to create an annotated tag. -m to comment on the tag creation",
+        "example": "git tag -a v1.4 9fceb02 -m \"my version 1.4\"",
+        "example_explanation": "Create an annotated tag named \"v1.4\" pointing to commit 9fceb02, with the comment \"my version 1.4\"",
+        "tags": [ "ProGit-Tagging-Annotated_Tags" ]
+      },
+      {
+        "command_text": "git tag --annotate <tag-name> <commit-hash> -m \"<tag-comment>\"",
+        "what_does": "Create an annotated tag, pointing to a previous commit",
+        "explanation": "--annotate to create an annotated tag. -m to comment on the tag creation",
+        "example": "git tag --annotate v1.4 9fceb02 -m \"my version 1.4\"",
+        "example_explanation": "Create an annotated tag named \"v1.4\" pointing to commit 9fceb02, with the comment \"my version 1.4\"",
+        "tags": [ "ProGit-Tagging-Tagging_Later" ]
+      },
+      {
+        "command_text": "git tag -s <tag-name> -m \"<tag-comment>\"",
+        "what_does": "Create a signed annotated tag",
+        "explanation": "-s to create a signed annotated tag. -m to comment on the tag creation",
+        "example": "git tag -s v1.4 -m \"my signed 1.4 tag\"",
+        "example_explanation": "Create a signed annotated tag named \"v1.4\" with the comment \"my signed 1.4 tag\"",
+        "tags": [ "ProGit-Tagging-Annotated_Tags" ]
+      },
+      {
+        "command_text": "git tag -v <tag-name>",
+        "what_does": "Verify a signed tag signature",
+        "explanation": "You need the signer’s public key in your keyring for this to work properly",
+        "example": "git tag -v v1.4.2.1",
+        "example_explanation": "Verify a tag named \"v1.4.2.1\"",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git tag <tag-name>-lw",
+        "what_does": "Create a lightweight tag",
+        "explanation": "Using -lw to create a lightweight tag",
+        "example": "git tag v1.4-lw",
+        "example_explanation": "Create a lightweight tag named \"v1.4\"",
+        "tags": [ "ProGit-Tagging-Lightweight_Tags" ]
+      },
+      {
+        "command_text": "git tag -d <tagname>",
+        "what_does": "Delete a tag (Locally)",
+        "explanation": "Delete a tag locally. Need to push to remote server",
+        "example": "git tag -d v1.4",
+        "example_explanation": "Delete a tag named \"v1.4\"",
+        "tags": [ "ProGit-Tagging-Deleting_Tags" ]
+      }
+    ]
+  },
+  "InfoEntries": 
+  {
+    "<url>": [
+      {
+        "command_text": "ssh://[user@]host.xz[:port]/path/to/repo.git/",
+        "description": "SSH url format",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "ssh://[user@]host.xz[:port]/~[user]/path/to/repo.git/",
+        "description": "SSH url format",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git://host.xz[:port]/path/to/repo.git/",
+        "description": "Git url format",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "git://host.xz[:port]/~[user]/path/to/repo.git/",
+        "description": "Git url format",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "http[s]://host.xz[:port]/path/to/repo.git/",
+        "description": "Http/Https url format",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "ftp[s]://host.xz[:port]/path/to/repo.git/",
+        "description": "Ftp/Ftps url format",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "[user@]host.xz:path/to/repo.git/",
+        "description": "Alternative SSH url format",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "[user@]host.xz:/~[user]/path/to/repo.git/",
+        "description": "SSH url format",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "/path/to/repo.git/",
+        "description": "Local url format",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "file:///path/to/repo.git/",
+        "description": "Local url format",
+        "tags": [ "" ]
+      }
+    ],
+    "<editor-string>": [
+      {
+        "command_text": "atom --wait",
+        "description": "Set Atom",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "emacs",
+        "description": "Set Emacs",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "nano -w",
+        "description": "Set Nano",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "vim",
+        "description": "Set Vim",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "subl -n -w",
+        "description": "Set Sublime Text (Mac)",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "'c:/program files (x86)/sublime text 3/sublimetext.exe' -w",
+        "description": "Set Sublime Text (Win, 32-bit)",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "'c:/program files/sublime text 3/sublimetext.exe' -w",
+        "description": "Set Sublime Text (Win, 64-bit)",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "mate -w",
+        "description": "Set Textmate",
+        "tags": [ "" ]
+      },
+      {
+        "command_text": "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin",
+        "description": "Set Notepad++",
+        "tags": [ "" ]
+      }
+    ]
+  }
+}
