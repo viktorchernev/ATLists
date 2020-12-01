@@ -4,7 +4,7 @@ namespace ATLists
 {
     public class EntryBase
     {
-        public virtual EntryType EntryType { get; }
+        public virtual string EntryType { get; }
 
         public SqlEntry SqlItem;
     }

@@ -8,7 +8,7 @@ namespace ATLists.SQL
         public int Id { get; set; }
 
 
-        public int ListType { get; set; }
+        public string ListType { get; set; }
 
 
         public byte SqlCategoryStorage { get; set; }

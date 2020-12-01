@@ -8,11 +8,11 @@ namespace ATLists
 {
     public class EntryBasic : EntryBase, ISingleTextStorage //IColorable
     {
-        public override EntryType EntryType
+        public override string EntryType
         {
             get
             {
-                return EntryType.Basic;
+                return "Basic";
             }
         }
 
@@ -165,7 +165,7 @@ namespace ATLists
             SqlItem = new SqlEntry();
             //SqlItem.SqlColorable = (byte)SqlColorableObject.Id;
             SqlItem.SqlSingleText = (byte)SqlSingleTextObject.Id;
-            SqlItem.EntryType = (int)EntryType;
+            SqlItem.EntryType = EntryType;
             Procedures.Insert(SqlItem);
         }
         public EntryBasic(SqlEntry e)

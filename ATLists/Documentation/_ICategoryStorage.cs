@@ -35,10 +35,10 @@ public void RemoveCategory(CategoryBase category)
     SqlCategoryStorageObject.Categories = ids.ToArray();
     Procedures.Update(SqlCategoryStorageObject);
 }
-public virtual CategoryBase GetCategory(SqlCategory sqlc)
+public CategoryBase GetCategory(SqlCategory sqlc)
 {
     CategoryBase cat = null;
-    cat = new CategoryBasic(sqlc);
+    cat = CategoryFactory.GetCategory(sqlc);
     return cat;
 }
 

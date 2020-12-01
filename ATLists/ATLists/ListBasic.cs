@@ -8,11 +8,11 @@ namespace ATLists
 {
     public class ListBasic : ListBase, ISingleTextStorage, IIconable, ICategoryStorage //IColorable
     {
-        public override ListType ListType
+        public override string ListType
         {
             get
             {
-                return ListType.Basic;
+                return "Basic";
             }
         }
 
@@ -194,6 +194,12 @@ namespace ATLists
 
             //update View
         }
+        public CategoryBase GetCategory(SqlCategory sqlc)
+        {
+            CategoryBase cat = null;
+            cat = CategoryFactory.GetCategory(sqlc);
+            return cat;
+        }
 
 
 
@@ -237,7 +243,7 @@ namespace ATLists
             //SqlItem.SqlColorable = (byte)SqlColorableObject.Id;
             SqlItem.SqlIconable = (byte)SqlIconableObject.Id;
             SqlItem.SqlCategoryStorage = (byte)SqlCategoryStorageObject.Id;
-            SqlItem.ListType = (int)ListType;
+            SqlItem.ListType = ListType;
             Procedures.Insert(SqlItem);
         }
         public ListBasic(SqlList list)
@@ -271,12 +277,6 @@ namespace ATLists
                 CategoryBase cat = GetCategory(sqlc);
                 Categories.Add(cat);
             }
-        }
-        CategoryBase GetCategory(SqlCategory sqlc)
-        {
-            CategoryBase cat = null;
-            cat = new CategoryBasic(sqlc);
-            return cat;
         }
     }
 }

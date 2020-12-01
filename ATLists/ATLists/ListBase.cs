@@ -4,7 +4,7 @@ namespace ATLists
 {
     public class ListBase
     {
-        public virtual ListType ListType { get; }
+        public virtual string ListType { get; }
 
         public SqlList SqlItem;
         //public IViewItem viewItem;

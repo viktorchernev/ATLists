@@ -75,3 +75,26 @@ First, we set the Data part of the implementation from the ARGS
 Then we create the sql object with the data
 Then we insert that sql object in the DB - "Procedures.Insert(Sqlo)", which populates the sqlobject Id
 Finally, we set up 
+
+Finally, extend factory ...
+
+
+EntryBase
+	.Type							string
+	.SqlItem						SqlEntry
+
+CategoryBase
+	.Type							string
+	.SqlItem						SqlCategory
+
+ListBase
+	.Type							string
+	.SqlItem						SqlList
+
+
+IEntryStorage
+	.SqlEntryStorageObject			SqlEntryStorage
+	.Entries						List<EntryBase>
+	.AddEntry(EntryBase)
+	.RemoveEntry(EntryBase)
+	.GetEntry(SqlEntry)				->EntryBasic

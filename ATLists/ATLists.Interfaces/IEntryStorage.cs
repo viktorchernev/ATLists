@@ -22,5 +22,6 @@ namespace ATLists.Interfaces
 
 
         //Compound Getters
+        EntryBase GetEntry(SqlEntry sqle);
     }
 }

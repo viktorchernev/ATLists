@@ -9,11 +9,11 @@ namespace ATLists
 {
     public class CategoryBasic : CategoryBase, ISingleTextStorage, IIconable, IEntryStorage //IColorable
     {
-        public override CategoryType CategoryType
+        public override string CategoryType
         {
             get
             {
-                return CategoryType.Basic;
+                return "Basic";
             }
         }
 
@@ -193,10 +193,10 @@ namespace ATLists
 
             //update View
         }
-        public virtual EntryBase GetEntry(SqlEntry sqle)
+        public EntryBase GetEntry(SqlEntry sqle)
         {
             EntryBase entry = null;
-            entry = new EntryBasic(sqle);
+            entry = EntryFactory.GetEntry(sqle);
             return entry;
         }
 
@@ -241,7 +241,7 @@ namespace ATLists
             SqlItem.SqlSingleText = (byte)SqlSingleTextObject.Id;
             SqlItem.SqlIconable = (byte)SqlIconableObject.Id;
             SqlItem.SqlEntryStorage = (byte)SqlEntryStorageObject.Id;
-            SqlItem.CategoryType = (int)CategoryType;
+            SqlItem.CategoryType = CategoryType;
             Procedures.Insert(SqlItem);
         }
         public CategoryBasic(SqlCategory cat)

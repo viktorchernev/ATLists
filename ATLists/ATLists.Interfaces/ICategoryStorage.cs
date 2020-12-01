@@ -19,5 +19,6 @@ namespace ATLists.Interfaces
 
 
         //Compound Getters
+        CategoryBase GetCategory(SqlCategory sqlc);
     }
 }

@@ -35,10 +35,10 @@ public void RemoveEntry(EntryBase entry)
     SqlEntryStorageObject.Entries = ids.ToArray();
     Procedures.Update(SqlEntryStorageObject);
 }
-public virtual EntryBase GetEntry(SqlEntry sqle)
+public EntryBase GetEntry(SqlEntry sqle)
 {
     EntryBase entry = null;
-    entry = new EntryBasic(sqle);
+    entry = EntryFactory.GetEntry(sqle);
     return entry;
 }
 

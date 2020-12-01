@@ -4,7 +4,7 @@ namespace ATLists
 {
     public class CategoryBase
     {
-        public virtual CategoryType CategoryType { get; }
+        public virtual string CategoryType { get; }
 
         public SqlCategory SqlItem;
     }

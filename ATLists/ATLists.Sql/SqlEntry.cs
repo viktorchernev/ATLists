@@ -8,7 +8,7 @@ namespace ATLists.SQL
         public int Id { get; set; }
 
 
-        public int EntryType { get; set; }
+        public string EntryType { get; set; }
 
 
         public byte SqlColorable { get; set; }
