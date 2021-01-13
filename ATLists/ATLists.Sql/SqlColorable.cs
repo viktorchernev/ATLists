@@ -6,6 +6,7 @@ namespace ATLists.SQL
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
+        public int ImplementorId { get; set; }
 
         public int ForeColor { get; set; }
         public int BackColor { get; set; }

@@ -82,8 +82,8 @@ namespace ATLists
             Categories.Add(category);
 
             //save to DataBase
-            List<byte> ids = new List<byte>();
-            foreach (CategoryBase c in Categories) ids.Add((byte)c.SqlItem.Id);
+            List<int> ids = new List<int>();
+            foreach (CategoryBase c in Categories) ids.Add((int)c.SqlItem.Id);
             SqlCategoryStorageObject.Categories = ids.ToArray();
             Procedures.Update(SqlCategoryStorageObject);
         }
@@ -92,8 +92,8 @@ namespace ATLists
             Categories.Remove(category);
 
             //save to DataBase
-            List<byte> ids = new List<byte>();
-            foreach (CategoryBase c in Categories) ids.Add((byte)c.SqlItem.Id);
+            List<int> ids = new List<int>();
+            foreach (CategoryBase c in Categories) ids.Add((int)c.SqlItem.Id);
             SqlCategoryStorageObject.Categories = ids.ToArray();
             Procedures.Update(SqlCategoryStorageObject);
 
@@ -130,9 +130,9 @@ namespace ATLists
 
             //Set SQL
             SqlItem = new SqlList();
-            SqlItem.SqlSingleText = (byte)SqlSingleTextObject.Id;
-            SqlItem.SqlIconable = (byte)SqlIconableObject.Id;
-            SqlItem.SqlCategoryStorage = (byte)SqlCategoryStorageObject.Id;
+            SqlItem.SqlSingleText = SqlSingleTextObject.Id;
+            SqlItem.SqlIconable = SqlIconableObject.Id;
+            SqlItem.SqlCategoryStorage = SqlCategoryStorageObject.Id;
             SqlItem.ListType = ListType;
             Procedures.Insert(SqlItem);
         }
@@ -154,7 +154,7 @@ namespace ATLists
             //ICategryStorage
             SqlCategoryStorageObject = cs;
             Categories = new List<CategoryBase>();
-            foreach (byte b in cs.Categories)
+            foreach (int b in cs.Categories)
             {
                 SqlCategory sqlc = Procedures.Categories[b];
                 CategoryBase cat = GetCategory(sqlc);

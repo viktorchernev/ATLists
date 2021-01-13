@@ -8,6 +8,6 @@ namespace ATLists.SQL
         public int Id { get; set; }
 
 
-        public byte[] Categories { get; set; }
+        public int[] Categories { get; set; }
     }
 }

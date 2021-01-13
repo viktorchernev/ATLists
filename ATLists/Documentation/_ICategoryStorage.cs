@@ -20,8 +20,8 @@ public void AddCategory(CategoryBase category)
     Categories.Add(category);
 
     //save to DataBase
-    List<byte> ids = new List<byte>();
-    foreach (CategoryBase c in Categories) ids.Add((byte)c.SqlItem.Id);
+    List<int> ids = new List<int>();
+    foreach (CategoryBase c in Categories) ids.Add(c.SqlItem.Id);
     SqlCategoryStorageObject.Categories = ids.ToArray();
     Procedures.Update(SqlCategoryStorageObject);
 }
@@ -30,8 +30,8 @@ public void RemoveCategory(CategoryBase category)
     Categories.Remove(category);
 
     //save to DataBase
-    List<byte> ids = new List<byte>();
-    foreach (CategoryBase c in Categories) ids.Add((byte)c.SqlItem.Id);
+    List<int> ids = new List<int>();
+    foreach (CategoryBase c in Categories) ids.Add(c.SqlItem.Id);
     SqlCategoryStorageObject.Categories = ids.ToArray();
     Procedures.Update(SqlCategoryStorageObject);
 }
@@ -52,7 +52,7 @@ public CTOR(SQLOBJECT)
     //ICategryStorage
     SqlCategoryStorageObject = cs;
     Categories = new List<CategoryBase>();
-    foreach (byte b in cs.Categories)
+    foreach (int b in cs.Categories)
     {
         SqlCategory sqlc = Procedures.Categories[b];
         CategoryBase cat = GetCategory(sqlc);
@@ -67,5 +67,5 @@ public CTOR()
     SqlCategoryStorageObject = new SqlCategoryStorage();
     Procedures.Insert(SqlCategoryStorageObject);
 
-    SQLOBJECT.SqlCategoryStorage = (byte)SqlCategoryStorageObject.Id;
+    SQLOBJECT.SqlCategoryStorage = SqlCategoryStorageObject.Id;
 }

@@ -11,9 +11,9 @@ namespace ATLists.SQL
         public string ListType { get; set; }
 
 
-        public byte SqlCategoryStorage { get; set; }
-        public byte SqlColorable { get; set; }
-        public byte SqlIconable { get; set; }
-        public byte SqlSingleText { get; set; }
+        public int SqlCategoryStorage { get; set; }
+        public int SqlColorable { get; set; }
+        public int SqlIconable { get; set; }
+        public int SqlSingleText { get; set; }
     }
 }

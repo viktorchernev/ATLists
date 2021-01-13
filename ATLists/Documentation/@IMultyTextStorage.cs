@@ -70,5 +70,5 @@ public CTOR()
     Procedures.Insert(SqlMultyTextObject);
 
 
-    SQLOBJECT.SqlMultyTextStorage = (byte)SqlMultyTextObject.Id;
+    SQLOBJECT.SqlMultyTextStorage = SqlMultyTextObject.Id;
 }

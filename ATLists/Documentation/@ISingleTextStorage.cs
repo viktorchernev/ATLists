@@ -49,5 +49,5 @@ public CTOR(string text)
     SqlSingleTextObject = new SqlSingleText() { Text = text };
     Procedures.Insert(SqlSingleTextObject);
 
-    SQLOBJECT.SqlSingleText = (byte)SqlSingleTextObject.Id;
+    SQLOBJECT.SqlSingleText = SqlSingleTextObject.Id;
 }

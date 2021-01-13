@@ -20,8 +20,8 @@ public void AddEntry(EntryBase entry)
     Entries.Add(entry);
 
     //save to DataBase
-    List<byte> ids = new List<byte>();
-    foreach (EntryBase e in Entries) ids.Add((byte)e.SqlItem.Id);
+    List<int> ids = new List<int>();
+    foreach (EntryBase e in Entries) ids.Add(e.SqlItem.Id);
     SqlEntryStorageObject.Entries = ids.ToArray();
     Procedures.Update(SqlEntryStorageObject);
 }
@@ -30,8 +30,8 @@ public void RemoveEntry(EntryBase entry)
     Entries.Remove(entry);
 
     //save to DataBase
-    List<byte> ids = new List<byte>();
-    foreach (EntryBase e in Entries) ids.Add((byte)e.SqlItem.Id);
+    List<int> ids = new List<int>();
+    foreach (EntryBase e in Entries) ids.Add(e.SqlItem.Id);
     SqlEntryStorageObject.Entries = ids.ToArray();
     Procedures.Update(SqlEntryStorageObject);
 }
@@ -51,7 +51,7 @@ public CTOR(SQLOBJECT)
     //IEntryStorage
     SqlEntryStorageObject = es;
     Entries = new List<EntryBase>();
-    foreach (byte b in es.Entries)
+    foreach (int b in es.Entries)
     {
         SqlEntry sqle = Procedures.Entries[b];
         EntryBase entry = GetEntry(sqle);
@@ -66,5 +66,5 @@ public CTOR()
     SqlSingleTextObject = new SqlSingleText() { Text = text };
     Procedures.Insert(SqlEntryStorageObject);
 
-    SQLOBJECT.SqlEntryStorage = (byte)SqlEntryStorageObject.Id;
+    SQLOBJECT.SqlEntryStorage = SqlEntryStorageObject.Id;
 }

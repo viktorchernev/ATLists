@@ -69,5 +69,5 @@ public CTOR(double quality = 100, int numberOfStars = 5)
     };
     Procedures.Insert(SqlQualifiableObject);
 
-    SQLOBJECT.SqlQualifiable = (byte)SqlQualifiableObject.Id;
+    SQLOBJECT.SqlQualifiable = SqlQualifiableObject.Id;
 }

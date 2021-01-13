@@ -44,5 +44,5 @@ public CTOR(string iconName = null)
     SqlIconableObject.ImageSource = iconName;
     Procedures.Insert(SqlIconableObject);
 
-    SQLOBJECT.SqlIconable = (byte)SqlIconableObject.Id;
+    SQLOBJECT.SqlIconable = SqlIconableObject.Id;
 }

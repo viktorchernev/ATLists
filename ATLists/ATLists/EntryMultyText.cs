@@ -110,11 +110,10 @@ namespace ATLists
             SqlSingleTextObject = new SqlSingleText() { Text = txt };
             Procedures.Insert(SqlSingleTextObject);
 
-
             //Set SQLEntry
             SqlItem = new SqlEntry();
-            SqlItem.SqlMultyText = (byte)SqlMultyTextObject.Id;
-            SqlItem.SqlSingleText = (byte)SqlSingleTextObject.Id;
+            SqlItem.SqlMultyText = SqlMultyTextObject.Id;
+            SqlItem.SqlSingleText = SqlSingleTextObject.Id;
             SqlItem.EntryType = EntryType;
             Procedures.Insert(SqlItem);
         }

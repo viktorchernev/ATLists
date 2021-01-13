@@ -149,15 +149,15 @@ namespace ATLists
 
             //Set SQLEntry
             SqlItem = new SqlEntry();
-            //SqlItem.SqlColorable = (byte)SqlColorableObject.Id;
-            SqlItem.SqlSingleText = (byte)SqlSingleTextObject.Id;
+            //SqlItem.SqlColorable = SqlColorableObject.Id;
+            SqlItem.SqlSingleText = SqlSingleTextObject.Id;
             SqlItem.EntryType = EntryType;
             Procedures.Insert(SqlItem);
         }
         public EntryBasic(SqlEntry e)
         {
             SqlItem = e;
-            SqlSingleText st = Procedures.SingleTexts[e.SqlSingleText + 1];
+            SqlSingleText st = Procedures.SingleTexts[e.SqlSingleText];
             //SqlColorable c = Procedures.Colorables[e.SqlColorable];
 
             //SqlSingleText

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace ATLists.SQL
 {
@@ -640,6 +641,25 @@ namespace ATLists.SQL
             {
                 string exc = ex.Message;
                 return false;
+            }
+        }
+
+
+
+        public static byte[] GetDatabase()
+        {
+            try
+            {
+                using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(DATABASE_PATH))
+                {
+                    byte[] db = File.ReadAllBytes(DATABASE_PATH);
+                    return db;
+                }
+            }
+            catch (Exception ex)
+            {
+                string exc = ex.Message;
+                return null;
             }
         }
     }

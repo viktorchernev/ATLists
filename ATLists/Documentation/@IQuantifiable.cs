@@ -249,7 +249,7 @@ public CTOR(
     };
     Procedures.Insert(SqlQuantifiableObject);
 
-    SQLOBJECT.SqlQuantifiable = (byte)SqlQuantifiableObject.Id;
+    SQLOBJECT.SqlQuantifiable = SqlQuantifiableObject.Id;
 }
 public CTOR(
     double ammount, int treshold,
@@ -294,5 +294,5 @@ public CTOR(
     };
     Procedures.Insert(SqlQuantifiableObject);
 
-    SQLOBJECT.SqlQuantifiable = (byte)SqlQuantifiableObject.Id;
+    SQLOBJECT.SqlQuantifiable = SqlQuantifiableObject.Id;
 }

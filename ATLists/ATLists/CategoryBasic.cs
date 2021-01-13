@@ -174,8 +174,8 @@ namespace ATLists
             Entries.Add(entry);
 
             //save to DataBase
-            List<byte> ids = new List<byte>();
-            foreach (EntryBase e in Entries) ids.Add((byte)e.SqlItem.Id);
+            List<int> ids = new List<int>();
+            foreach (EntryBase e in Entries) ids.Add(e.SqlItem.Id);
             SqlEntryStorageObject.Entries = ids.ToArray();
             Procedures.Update(SqlEntryStorageObject);
 
@@ -186,8 +186,8 @@ namespace ATLists
             Entries.Remove(entry);
 
             //save to DataBase
-            List<byte> ids = new List<byte>();
-            foreach (EntryBase e in Entries) ids.Add((byte)e.SqlItem.Id);
+            List<int> ids = new List<int>();
+            foreach (EntryBase e in Entries) ids.Add(e.SqlItem.Id);
             SqlEntryStorageObject.Entries = ids.ToArray();
             Procedures.Update(SqlEntryStorageObject);
 
@@ -223,10 +223,10 @@ namespace ATLists
 
             //Set SQLCategory
             SqlItem = new SqlCategory();
-            //SqlItem.SqlColorable = (byte)SqlColorableObject.Id;
-            SqlItem.SqlSingleText = (byte)SqlSingleTextObject.Id;
-            SqlItem.SqlIconable = (byte)SqlIconableObject.Id;
-            SqlItem.SqlEntryStorage = (byte)SqlEntryStorageObject.Id;
+            //SqlItem.SqlColorable = SqlColorableObject.Id;
+            SqlItem.SqlSingleText = SqlSingleTextObject.Id;
+            SqlItem.SqlIconable = SqlIconableObject.Id;
+            SqlItem.SqlEntryStorage = SqlEntryStorageObject.Id;
             SqlItem.CategoryType = CategoryType;
             Procedures.Insert(SqlItem);
         }
@@ -249,13 +249,15 @@ namespace ATLists
             //IEntryStorage
             SqlEntryStorageObject = es;
 
-            if(es == null)
-            {
-                bool bbb = false;
-            }
+            //DEBUGG
+            //if (es == null)
+            //{
+            //    bool bbb = false;
+            //    var rrr = Procedures.GetDatabase();
+            //}
 
             Entries = new List<EntryBase>();
-            foreach (byte b in es.Entries)
+            foreach (int b in es.Entries)
             {
                 SqlEntry sqle = Procedures.Entries[b];
                 EntryBase entry = GetEntry(sqle);
