@@ -8,10 +8,6 @@ namespace ATLists.Interfaces
 {
     public interface IEntryStorage
     {
-        //SQLObject
-        SqlEntryStorage SqlEntryStorageObject { get; }
-
-
         //Data Storage
         List<EntryBase> Entries { get; }
 

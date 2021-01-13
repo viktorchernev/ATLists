@@ -9,26 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Documentation\%40IQualifiable.cs" />
-    <Compile Remove="Documentation\@IIconable.cs" />
-    <Compile Remove="Documentation\@IMultyTextStorage.cs" />
-    <Compile Remove="Documentation\@IQuantifiable.cs" />
-    <Compile Remove="Documentation\@ISingleTextStorage.cs" />
-    <Compile Remove="Documentation\_ICategoryStorage.cs" />
-    <Compile Remove="Documentation\_IEntryStorage.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Documentation\%40IMultyTextStorage.cs" />
-    <None Include="Documentation\@IQualifiable.cs" />
-    <None Include="Documentation\%40IQuantifiable.cs" />
-    <None Include="Documentation\_ICategoryStorage.cs" />
-    <None Include="Documentation\_IEntryStorage.cs" />
-    <None Include="Documentation\%40IIconable.cs" />
-    <None Include="Documentation\%40ISingleTextStorage.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
   </ItemGroup>

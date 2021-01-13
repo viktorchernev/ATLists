@@ -16,8 +16,10 @@ namespace ATLists.SQL
         public static Dictionary<int, SqlQualifiable> Qualifiables { get; private set; }
         public static Dictionary<int, SqlQuantifiable> Quantifiables { get; private set; }
         public static Dictionary<int, SqlIconable> Iconables { get; private set; }
+
         public static Dictionary<int, SqlEntryStorage> EntryStorages { get; private set; }
         public static Dictionary<int, SqlCategoryStorage> CategoryStorages { get; private set; }
+
         public static Dictionary<int, SqlEntry> Entries { get; private set; }
         public static Dictionary<int, SqlCategory> Categories { get; private set; }
         public static Dictionary<int, SqlList> Lisis { get; private set; }
@@ -621,6 +623,7 @@ namespace ATLists.SQL
                 return false;
             }
         }
+
 
 
         /// <summary>

@@ -7,6 +7,5 @@ namespace ATLists
         public virtual string ListType { get; }
 
         public SqlList SqlItem;
-        //public IViewItem viewItem;
     }
 }

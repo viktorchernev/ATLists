@@ -10,7 +10,6 @@ namespace ATLists.SQL
             get;
             set;
         }
-        public int ImplementorId { get; set; }
 
 
 

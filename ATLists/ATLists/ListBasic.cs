@@ -67,11 +67,6 @@ namespace ATLists
 
 
         //ICategoryStorage
-        public SqlCategoryStorage SqlCategoryStorageObject
-        {
-            get;
-            private set;
-        }
         public List<CategoryBase> Categories
         {
             get;
@@ -82,22 +77,19 @@ namespace ATLists
             Categories.Add(category);
 
             //save to DataBase
-            List<int> ids = new List<int>();
-            foreach (CategoryBase c in Categories) ids.Add((int)c.SqlItem.Id);
-            SqlCategoryStorageObject.Categories = ids.ToArray();
-            Procedures.Update(SqlCategoryStorageObject);
+            SqlCategoryStorage scs = new SqlCategoryStorage()
+            {
+                ListId = SqlItem.Id,
+                CategoryId = category.SqlItem.Id
+            };
+            Procedures.Insert(scs);
         }
         public void RemoveCategory(CategoryBase category)
         {
             Categories.Remove(category);
 
-            //save to DataBase
-            List<int> ids = new List<int>();
-            foreach (CategoryBase c in Categories) ids.Add((int)c.SqlItem.Id);
-            SqlCategoryStorageObject.Categories = ids.ToArray();
-            Procedures.Update(SqlCategoryStorageObject);
-
-            //update View
+            //remove from DataBase
+            //Procedures.RemoveCategory(category.SqlItem.Id);
         }
         public CategoryBase GetCategory(SqlCategory sqlc)
         {
@@ -125,14 +117,11 @@ namespace ATLists
 
             //ICategoryStorage
             Categories = new List<CategoryBase>();
-            SqlCategoryStorageObject = new SqlCategoryStorage();
-            Procedures.Insert(SqlCategoryStorageObject);
 
             //Set SQL
             SqlItem = new SqlList();
             SqlItem.SqlSingleText = SqlSingleTextObject.Id;
             SqlItem.SqlIconable = SqlIconableObject.Id;
-            SqlItem.SqlCategoryStorage = SqlCategoryStorageObject.Id;
             SqlItem.ListType = ListType;
             Procedures.Insert(SqlItem);
         }
@@ -141,22 +130,21 @@ namespace ATLists
             SqlItem = list;
             SqlSingleText st = Procedures.SingleTexts[list.SqlSingleText];
             SqlIconable i = Procedures.Iconables[list.SqlIconable];
-            SqlCategoryStorage cs = Procedures.CategoryStorages[list.SqlCategoryStorage];
 
             //SqlSingleText
             SqlSingleTextObject = st;
             Text = st.Text;
 
-            //IIconed
+            //IIconable
             SqlIconableObject = i;
             ImageSource = i.ImageSource;
 
             //ICategryStorage
-            SqlCategoryStorageObject = cs;
             Categories = new List<CategoryBase>();
-            foreach (int b in cs.Categories)
+            foreach (SqlCategoryStorage s in Procedures.CategoryStorages.Values)
             {
-                SqlCategory sqlc = Procedures.Categories[b];
+                if (s.ListId != SqlItem.Id) continue;
+                SqlCategory sqlc = Procedures.Categories[s.CategoryId];
                 CategoryBase cat = GetCategory(sqlc);
                 Categories.Add(cat);
             }

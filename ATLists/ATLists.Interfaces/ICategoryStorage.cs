@@ -5,10 +5,6 @@ namespace ATLists.Interfaces
 {
     public interface ICategoryStorage
     {
-        //SQLObject
-        SqlCategoryStorage SqlCategoryStorageObject { get; }
-
-
         //Data Storage
         List<CategoryBase> Categories { get; }
 
