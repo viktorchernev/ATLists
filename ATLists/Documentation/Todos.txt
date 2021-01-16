@@ -16,15 +16,19 @@ In the implementation examples, add ctors with data parameters for the given int
 
 BUG: Entries in Category are null after loading from the DB
 BUG: ListBasic instances does not have SqlItem after loading from the DB
-
+In ATLists add Parents - IContainee interface and IContainers interface? - can have many parents!
 
 
 
 DONE:
-BUG-FIX: 0 id resulting from conversion from "int 256" to "byte 0""
+	bug-fix: 0 id resulting from conversion from "int 256" to "byte 0""
+
 
 CHECKED-IN:
-Add reference to "SQLite-net" to remove errors and build
-Copied all implementation documentation
-IEntryStorage inheritance problem
-sql category item has category type, how will inheritence work?
+
+
+PUSHED-UPSTREAM:
+	Add reference to "SQLite-net" to remove errors and build
+	Copied all implementation documentation
+	IEntryStorage inheritance problem
+	sql category item has category type, how will inheritence work?
