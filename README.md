@@ -1,0 +1,100 @@
+					I. INTRO
+
+ATLists is a library for creating various lists and seamlessly storing those lists in a database. 
+A List is more simple - it will have Categories, and those Categories will have Entries.
+A Tree is a multylayered list. A Tree will have Branches that will have Entries and more Branches.
+Both have their most appropriate uses.
+
+In order to have a big variety of data storage unit types and not waste storage on multypurpous containers, we have
+many interfaces that are implemented when needed, each having its own data storage. The reason for this is
+because C# does not allow for multiple inheritence. "ATLists.Interfaces" contains all those different interfaces 
+this library is centered around, and in "Documentation" you can find the implementations of those interfaces,
+you can copy paste.
+
+
+
+					II. THE SQL
+
+Each interface has a coresponding SQL type that resides in "ATLists.Sql" namespace and is used to
+facilitate database storage, via the "sqlite-net-pcl" library. The static class "ATLists.Sql.Procedures" contains 
+Insert and Update functions for each of those SQL types, as well as dictionaries that contain those types by 
+database Id. 
+"ATLists.Sql.Procedures" also contains other database maintainance methods.
+
+
+
+					III. THE INTERFACES
+
+Interfaces are the core component of this library. Every interface has:
+-	An instance of its corresponding SQL object
+	This is needed for the the "sqlite-net-pcl" library. The SQL class represents the data storage
+	portion of the interface, although represented with primitive value types that are valid with te SQLite
+	database. When needed, conversion is achieved via the "Newtonsoft.Json" library by serializing
+	objects (like dicrionaries e.g.) to JSON and storing those as strings in the SQL object.
+
+-	A data storage in the form of one or more properties that are "{Get; Private Set;}" (which is important),
+	that may or may not be in a corresponding class from "ATLists.Basics". We use the setters as public
+	(at least for now)
+
+-	Data setters and manipulators - Methods that set the data in the data storage, while changing it in
+	the SQL object and saving the SQL object to the database at the same time.
+
+-	/OPTIONAL/ Compound getters/setters are methods that retrieve or modify a combination of a couple of properties.
+
+Interface
+	.Sql
+	.Data
+	.Setters
+	.Compound getters
+
+
+
+					IV. IMPLEMENTOR CLASSES
+
+All implementors inherit from the base one provided in this library - 
+EntryBasic, CategoryBasic and ListBasic. Those inherit a mechanism for mapping all the inerfaces
+to the class - the InterfaceMap.
+
+
+
+					V. IMPLEMENTING THE INTERFACES
+
+There are 2 parts in implementing any of the interfaces - the actual implimentation and the code that 
+is added to the implementing class constructors, and implementors are meant to have at least two -
+one for creating the object from the database, and the other to create a new object and add it to the database.
+
+"CTOR(SQLOBJECT)" syntax is used to construct the object from SQLOBJECT from the database.
+Implementors have a constructor in such syntax - 
+"CTOR(SqlInterfaceA, SqlInterfaceb, ... )"
+In those constructors we assign the SqlObject and unpack the data from the object.
+"CTOR(int SqlInterfaceAId, SqlInterfaceBId, ... )"
+Same as above, except we get the SqlObject from the Procedures Dictionaries.
+
+"CTOR(ARGS)" syntax is used for constructing brand new objects and adding them to the database.
+First, we set the Data part of the implementation from the ARGS
+Then we create the sql object with the data
+Then we insert that sql object in the DB - "Procedures.Insert(Sqlo)", which populates the sqlobject Id
+Finally, we set up 
+
+Finally, extend factory ...
+
+
+EntryBase
+	.Type							string
+	.SqlItem						SqlEntry
+
+CategoryBase
+	.Type							string
+	.SqlItem						SqlCategory
+
+ListBase
+	.Type							string
+	.SqlItem						SqlList
+
+
+IEntryStorage
+	.SqlEntryStorageObject			SqlEntryStorage
+	.Entries						List<EntryBase>
+	.AddEntry(EntryBase)
+	.RemoveEntry(EntryBase)
+	.GetEntry(SqlEntry)				->EntryBasic
